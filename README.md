@@ -1,6 +1,6 @@
 # Readme
 
-### Before running
+### Instructions
 
 1. Clone the repo and then cd to the folder
 2. Run ```npm install ```
