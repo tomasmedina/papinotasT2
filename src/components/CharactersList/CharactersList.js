@@ -27,7 +27,7 @@ class CharactersList extends Component{
     showModal = ()=>this.setState({visible:true});
     hideModal = ()=>this.setState({visible:false});
 
-    btnPress(films,characterName,starships,homeworld){
+    btnPress =(films,characterName,starships,homeworld)=>{
         let filmList = [];
         let starshipList = [];
         let home = '';
@@ -56,7 +56,6 @@ class CharactersList extends Component{
     }
 
     filterPerson = text => {
-        console.log(this.state.refresh)
         if(text.length == 0){
             this.setState({data:[]})
         }
@@ -72,23 +71,20 @@ class CharactersList extends Component{
               this.state.allPersons === newData
         }
       };
-      componentDidMount(){
-          console.log("DIDMOUNT")
-      }
+    //   componentDidMount(){
+    //       console.log("DIDMOUNT")
+    //   }
 
-      componentWillUpdate(nextProps,nextState){
-          console.log("WILL UPDATE")
-          console.log(nextState)
-      }
-      componentDidUpdate(lol,lal){
-          console.log("DID UPDATE")
-          console.log(lol.data.allPersons)
-          console.log(lal)
-      }
+    //   componentWillUpdate(nextProps,nextState){
+    //       console.log("WILL UPDATE")
+    //       console.log(nextState)
+    //   }
+    //   componentDidUpdate(lol,lal){
+    //       console.log("DID UPDATE")
+    //       console.log(lol.data.allPersons)
+    //       console.log(lal)
+    //   }
 
-    isFavorite=(value)=>{
-        console.log(value)
-    }
 
     render(){
 
@@ -97,7 +93,7 @@ class CharactersList extends Component{
         this.tempData = this.props.data.allPersons
         
         if(this.state.data.length==0){
-            this.state.allPersons = this.props.data.allPersons
+            this.state.allPersons = this.tempData
         }
         else{
             this.state.allPersons = this.state.data
@@ -117,12 +113,13 @@ class CharactersList extends Component{
                 ListEmptyComponent={<Text style={styles.container}>Loading</Text>}      
                 renderItem={({item})=>
                     <TouchableOpacity 
-                    id={item.id} onChange={e=>{this.isFavorite(e)}}
+                    id={item.id}
                     onPress={()=>this.btnPress(item.films,item.name,item.starships,item.homeworld)}>
                         <CharacterItemClass 
                         id={item.id} films={item.films}
                         starships={item.starships}
-                        name={item.name}>
+                        name={item.name}
+                        >
                         </CharacterItemClass>
                     </TouchableOpacity>}
                                 

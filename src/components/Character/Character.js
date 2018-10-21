@@ -8,17 +8,22 @@ class CharacterItemClass extends Component{
         super(props);
         this.state={
             favorite:false,
+
         }
     }
 
-    favoriteCharacter(){
-        console.log(this.state.favorite);
+    favoriteCharacter=()=>{
         this.setState({favorite:!this.state.favorite})
-        console.log(this.state.favorite)
+
     }
 
     render(){
+
+        this.state.id = this.props.id
+
+
         return(
+  
             <View style={styles.container}>
                 <Text style={styles.text} key={this.props.id}>{this.props.name} </Text>
 

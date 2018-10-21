@@ -11,11 +11,11 @@ class CharacterInfo extends Component{
         }
     }
 
-    favoriteCharacter(){
-        this.setState({favorite:true})
-    }
 
     render(){
+
+
+
         const{visible} = this.state
         const{favorite} = this.state
         let data = this.props.data
