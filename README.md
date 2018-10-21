@@ -14,6 +14,6 @@
 * Use the searchbar to start typing a name and the list will be filtered based on the input
 
 ### Notes
-* When the character selected does not have a homeworld and/or starship a text written in [yoda speech]http://www.yodaspeak.co.uk/index.php) is displayed
+* When the character selected does not have a homeworld and/or starship a text written in [yoda speech](http://www.yodaspeak.co.uk/index.php) is displayed
 * If the error ':CFBundleIdentifier does not exist' appears please run ``` rm -rf ios/build/ ``` and run it again
 * This app has been tested on the iOS simulator 
