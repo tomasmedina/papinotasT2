@@ -71,19 +71,7 @@ class CharactersList extends Component{
               this.state.allPersons === newData
         }
       };
-    //   componentDidMount(){
-    //       console.log("DIDMOUNT")
-    //   }
 
-    //   componentWillUpdate(nextProps,nextState){
-    //       console.log("WILL UPDATE")
-    //       console.log(nextState)
-    //   }
-    //   componentDidUpdate(lol,lal){
-    //       console.log("DID UPDATE")
-    //       console.log(lol.data.allPersons)
-    //       console.log(lal)
-    //   }
 
 
     render(){
